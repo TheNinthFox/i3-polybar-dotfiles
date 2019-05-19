@@ -1,0 +1,78 @@
+;; Global WM Settings
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+;; =================================
+
+
+;; File Inclusion
+
+include-file = ~/.config/polybar/colors.ini
+include-file = ~/.config/polybar/modules.ini
+include-file = ~/.config/polybar/user_modules.ini
+
+;; =================================
+
+
+;; Bar Settings
+
+[bar/top]
+
+;; Positioning
+width = 100%
+height = 40
+fixed-center = true
+
+;; Colors
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+;; Line
+line-size = 0
+line-color = ${colors.foreground-alt}
+
+;; Padding & Margins
+padding-left = 0
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
+;; Border
+;border-top-size = 2
+;border-top-color = ${colors.foreground-alt}
+
+;; Fonts
+font-0 = monospace:pixelsize=11;4
+font-1 = symbola:pixelsize=12;4
+font-2 = unifont:fontformat=truetype:size=11:antialias=false;4
+font-3 = Siji:pixelsize=10:size=10;3
+font-4 = WunconSiji:pixelsize=10:size=10;3
+font-5 = fontawesome:pixelsize=10:size=10;3
+
+;; Modules
+modules-left = i3 spotify
+modules-center = date
+modules-right = weather wlan eth battery 
+
+;; Tray
+tray-position = right
+tray-padding = 2
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+;; =================================
+
+
+;; Settings
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
